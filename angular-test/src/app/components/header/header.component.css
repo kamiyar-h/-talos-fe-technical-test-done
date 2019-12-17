@@ -1,0 +1,36 @@
+.navbar{
+  margin-bottom: 15px;
+}
+.addPostBtn{
+  overflow: hidden;
+  position: relative;
+}
+
+.textHoverLayer {
+  color:#fff;
+  opacity: 0;
+  position:absolute;
+  top:-70px;
+  width:100%;
+  left:0;
+  padding:5px 0;
+  transition: all;
+  transition-duration: 300ms;
+  transition-delay: 150ms;
+}
+
+.addPostBtn:hover .textHoverLayer{
+  top: 0;
+  opacity: 1;
+}
+
+.text{
+
+  transition: all;
+  transition-duration: 300ms;
+  opacity: 1;
+}
+.addPostBtn:hover .text{
+
+  opacity: 0;
+}

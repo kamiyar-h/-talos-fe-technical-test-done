@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row justify-content-center text-center" @fadeIn>
+    <div class="col-sm-12 photoUrl">
+      <div class="photoUrl-wrapper  d-flex h-100">
+        <div class="row justify-content-center align-self-center" style="margin: 0 auto;">
+          <img [src]="post.photoUrl ? photoBaseUrl+post.photoUrl : 'assets/no-image.png'"
+               class="img-fluid">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 title">
+      <h1>{{ post.title }}</h1>
+    </div>
+
+    <div class="col-sm-12 description">
+      <p>{{ post.description }}</p>
+    </div>
+
+    <div class="col-sm-12 tags text-left d-inline-flex">
+      <span style="margin-right: 10px">Tags: </span>
+      <ul class="list-inline">
+        <li *ngFor="let tag of post.tags"
+          class="list-inline-item"><span class="badge badge-info">{{tag}}</span></li>
+      </ul>
+    </div>
+  </div>
+</div>

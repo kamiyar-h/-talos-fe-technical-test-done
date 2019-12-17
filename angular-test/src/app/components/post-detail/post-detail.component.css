@@ -1,0 +1,33 @@
+.photoUrl {
+
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.photoUrl:hover img{
+  transform: scale(1.2,1.2);
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+}
+
+.photoUrl img{
+  transform: scale(1.0,1.0);
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+}
+
+.photoUrl-wrapper{
+  overflow: hidden;
+  max-height: 250px;
+  min-height: 250px;
+}
+
+.title{
+  margin: 25px 0;
+}
+
+.description{
+  padding: 15px;
+  margin-bottom: 15px;
+}

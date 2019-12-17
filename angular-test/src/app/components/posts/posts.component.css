@@ -1,0 +1,26 @@
+.tags a {
+  cursor: pointer;
+}
+
+.card:hover img{
+  transform: scale(1.2,1.2);
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+}
+
+.card .card-text{
+  min-height: 100px;
+}
+
+.card img{
+  transform: scale(1.0,1.0);
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+}
+
+.card-img-wrapper{
+  overflow: hidden;
+  max-height: 250px;
+  min-height: 250px;
+  padding: 5px;
+}

@@ -1,0 +1,26 @@
+<div class="row justify-content-center">
+  <div *ngFor="let post of posts$ | async;"
+       class="col-lg-4 col-md-6 col-sm-12 mb-3">
+    <div class="card" @fadeIn>
+      <div class="card-img-wrapper d-flex h-100">
+        <div class="row justify-content-center align-self-center">
+        <img class="card-img-top"
+             [src]="post.photoUrl ? photoBaseUrl+post.photoUrl : 'assets/no-image.png'"
+             [alt]="post.title">
+        </div>
+      </div>
+      <div class="card-body text-left">
+        <h5 class="card-title">{{ post.title | shorten:30 }}</h5>
+        <p class="card-text">{{ post.description | shorten:150 }}</p>
+      </div>
+      <div class="card-footer">
+        <div class="float-left tags">
+          <a *ngFor="let tag of post.tags"
+             [routerLink]="['/posts',post.id]"
+             class="badge badge-info mr-1 text-white">{{ tag }}</a>
+        </div>
+        <a [routerLink]="['/posts',post.id]" class="float-right btn btn-primary text-white">View</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <!-- LOGO AND TITLE -->
+  <a class="navbar-brand" routerLink="/">
+    <img src="assets/talos_logo.svg"  class="align-self-center" alt="Talos Technical test">
+    <strong style="font-size: 24px">{{ title }}</strong>
+  </a>
+  <button class="navbar-toggler"
+          (click)="toggleNavbar()"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <!-- NAV BAR LINKS -->
+    <div class="collapse navbar-collapse text-left"
+         [ngClass]="{ 'show': navbarOpen }"
+         id="navbarNav">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/posts">Posts</a>
+        </li>
+      </ul>
+      <a *ngIf="!inNewPost"
+         [@hoverAddBtn]="addPostButtonEvent"
+         routerLink="posts/new"
+         type="button"
+         class="btn btn-outline-success addPostBtn"
+         (mouseenter)="mouseEnter()"
+         (click)="mouseLeave()"
+         (mouseleave)="mouseLeave()" >
+        <span class="text" >{{ addButtonLeave }}</span>
+        <span class="textHoverLayer">{{ addButtonHover }}</span>
+      </a>
+    </div>
+
+</nav>
