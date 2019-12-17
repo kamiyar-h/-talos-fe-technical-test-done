@@ -1,0 +1,6 @@
+{
+  "swagger": {
+    "outputDirectory": "./test/data",
+    "entryFile": "./src/index.ts"
+  }
+}
